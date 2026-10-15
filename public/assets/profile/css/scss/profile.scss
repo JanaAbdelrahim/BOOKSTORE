@@ -1,0 +1,231 @@
+@use "../../../shared/styles/global/scss/mixins" as *;
+
+.content {
+
+    .part1 {
+        &>.item {
+
+            .body,
+            .head {
+                i {
+                    color: #2c2013;
+                    cursor: pointer;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .part2 {
+        &>.item {
+            background-color: #1a3a28;
+            border: 1px solid #f3e8d2;
+            border-radius: 10px;
+
+            .statistics {
+                .state {
+                    background-color: #f3e8d2;
+                    color: #2c2013;
+                    border-radius: 10px;
+                    position: relative;
+
+                    &::before {
+                        @include createEle(10px, 10px);
+                        @include position($t: 10px, $l: 10px);
+                        border-radius: 100%;
+                        background: radial-gradient(circle at 35% 30%, #fff, #3f8a5c);
+                    }
+                }
+            }
+
+            .nav-links {
+                @include responsive(350) {
+                    overflow-x: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 0;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        background: transparent;
+                    }
+
+                    .nav.nav-tabs {
+                        width: max-content;
+                        padding-inline: 10px;
+                    }
+                }
+
+                .nav.nav-tabs {
+                    border: none;
+                    width: max-content;
+
+                    li {
+
+                        button {
+                            position: relative;
+                            border: 1px solid #f3e8d2;
+                            background-color: #1a3a28;
+                            padding: 10px 20px 9px;
+                            height: fit-content;
+                            color: #fff;
+                            transition: all .3s;
+                            font-weight: 600;
+                            font-size: 14px;
+
+
+                            &::before {
+                                @include createEle(7px, 7px);
+                                @include position($t: 5px, $l: 5px);
+                                background: radial-gradient(circle at 35% 30%, #a9c7ae, #2f6b47);
+                                border-radius: 100%;
+                                transition: all .3s;
+                            }
+
+                            &:hover,
+                            &.active {
+                                background-color: #2f6b47;
+                                color: #fff;
+                            }
+
+                            &.active::before,
+                            &:hover::before {
+                                background: radial-gradient(circle at 35% 30%, #fff, #2f6b47);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-responsive {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .35);
+}
+
+.table {
+    color: #2c2013;
+    margin-bottom: 0;
+    background-color: #F3E8D2;
+    border-radius: 4px;
+
+    thead th {
+        background-color: #1a3a28;
+        color: #fff;
+    }
+
+    tbody {
+        tr {
+
+            td,
+            th {
+                background-color: #F3E8D2;
+                border-color: rgba(27, 36, 48, .12);
+                vertical-align: middle;
+            }
+
+            &:nth-child(even) {
+
+                td,
+                th {
+                    background-color: #f5ecd7;
+                }
+            }
+        }
+
+        th.head {
+            color: rgba(#2c2013, .55);
+        }
+    }
+
+}
+
+.badge {
+    @include position($t: 10px, $r: 10px);
+}
+
+.modal-content {
+    background-color: #1a3a28;
+    border: 1px solid #f3e8d2;
+    border-radius: 10px;
+    color: #fff;
+
+    .modal-header {
+        button {
+            color: #fff;
+        }
+    }
+
+}
+
+
+.btn-add-author {
+    background-color: #F3E8D2;
+    color: #1a3a28;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+
+    &:hover {
+        background-color: #dcc9a0;
+        color: #1a3a28;
+    }
+}
+
+
+
+.api-error-banner {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+form {
+    &#BookFilterForm {
+        background-color: #F3E8D2;
+        border-radius: 10px;
+    }
+
+    label {
+        font-weight: 700;
+
+        &.input-group-text {
+            border: 1px solid #2f6b47;
+        }
+    }
+
+    input.form-control,
+    textarea.form-control,
+    #Sort {
+        border: 1px solid #fff;
+
+        &:focus {
+            border-color: #2f6b47;
+            box-shadow: none;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+}
+
+button.save {
+    background-color: #2f6b47;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #1a3a28;
+    }
+}

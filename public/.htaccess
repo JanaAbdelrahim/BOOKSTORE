@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# cond =>condition
+# !-f file
+# !-d directory
+# % var
+# query string append
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

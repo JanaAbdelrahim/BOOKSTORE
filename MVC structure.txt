@@ -1,0 +1,57 @@
+book-store/
+│
+├── app/
+│   ├── controllers/
+│   │   ├── HomeController.php
+│   │   ├── AuthController.php
+│   │   ├── BookController.php
+│   │   ├── ProfileController.php
+│   │   ├── OrderController.php
+│   │   └── AdminController.php
+│   │
+│   ├── models/
+│   │   ├── User.php
+│   │   ├── Author.php
+│   │   ├── Category.php
+│   │   ├── Book.php
+│   │   ├── Order.php
+│   │   └── OrderItem.php
+│   │
+│   ├── views/
+│   │   ├── layouts/
+│   │   │   ├── header.php
+│   │   │   └── footer.php
+│   │   ├── home/
+│   │   │   └── index.php
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   └── register.php
+│   │   ├── books/
+│   │   │   ├── index.php
+│   │   │   └── show.php
+│   │   ├── profile/
+│   │   │   └── index.php
+│   │   └── admin/
+│   │       ├── dashboard.php
+│   │       ├── books.php
+│   │       ├── users.php
+│   │       └── orders.php
+│
+├── core/
+│   ├── App.php
+│   ├── Controller.php
+│   ├── Database.php
+│   └── Model.php
+│
+├── config/
+│   └── config.php
+│
+├── public/
+│   ├── index.php
+│   ├── .htaccess
+│   ├── assets/
+│   └── uploads/
+│       └── books/
+│
+└── routes/
+    └── web.php

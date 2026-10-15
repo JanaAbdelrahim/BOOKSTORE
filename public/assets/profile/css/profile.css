@@ -1,0 +1,193 @@
+.content .part1 > .item .body i,
+.content .part1 > .item .head i {
+  color: #2c2013;
+  cursor: pointer;
+  font-weight: 700;
+}
+.content .part2 > .item {
+  background-color: #1a3a28;
+  border: 1px solid #f3e8d2;
+  border-radius: 10px;
+}
+.content .part2 > .item .statistics .state {
+  background-color: #f3e8d2;
+  color: #2c2013;
+  border-radius: 10px;
+  position: relative;
+}
+.content .part2 > .item .statistics .state::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  right: initial;
+  bottom: initial;
+  left: 10px;
+  z-index: initial;
+  border-radius: 100%;
+  background: radial-gradient(circle at 35% 30%, #fff, #3f8a5c);
+}
+@media (max-width: 1300px) {
+  .content .part2 > .item .nav-links {
+    overflow-x: auto;
+  }
+  .content .part2 > .item .nav-links::-webkit-scrollbar {
+    width: 0;
+  }
+  .content .part2 > .item .nav-links::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  .content .part2 > .item .nav-links .nav.nav-tabs {
+    width: max-content;
+    padding-inline: 10px;
+  }
+}
+.content .part2 > .item .nav-links .nav.nav-tabs {
+  border: none;
+  width: max-content;
+}
+.content .part2 > .item .nav-links .nav.nav-tabs li button {
+  position: relative;
+  border: 1px solid #f3e8d2;
+  background-color: #1a3a28;
+  padding: 10px 20px 9px;
+  height: fit-content;
+  color: #fff;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 14px;
+}
+.content .part2 > .item .nav-links .nav.nav-tabs li button::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 5px;
+  right: initial;
+  bottom: initial;
+  left: 5px;
+  z-index: initial;
+  background: radial-gradient(circle at 35% 30%, #a9c7ae, #2f6b47);
+  border-radius: 100%;
+  transition: all 0.3s;
+}
+.content .part2 > .item .nav-links .nav.nav-tabs li button:hover, .content .part2 > .item .nav-links .nav.nav-tabs li button.active {
+  background-color: #2f6b47;
+  color: #fff;
+}
+.content .part2 > .item .nav-links .nav.nav-tabs li button.active::before, .content .part2 > .item .nav-links .nav.nav-tabs li button:hover::before {
+  background: radial-gradient(circle at 35% 30%, #fff, #2f6b47);
+}
+
+.table-responsive {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.35);
+}
+
+.table {
+  color: #2c2013;
+  margin-bottom: 0;
+  background-color: #F3E8D2;
+  border-radius: 4px;
+}
+.table thead th {
+  background-color: #1a3a28;
+  color: #fff;
+}
+.table tbody tr td,
+.table tbody tr th {
+  background-color: #F3E8D2;
+  border-color: rgba(27, 36, 48, 0.12);
+  vertical-align: middle;
+}
+.table tbody tr:nth-child(even) td,
+.table tbody tr:nth-child(even) th {
+  background-color: #f5ecd7;
+}
+.table tbody th.head {
+  color: rgba(44, 32, 19, 0.55);
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: initial;
+  left: initial;
+  z-index: initial;
+}
+
+.modal-content {
+  background-color: #1a3a28;
+  border: 1px solid #f3e8d2;
+  border-radius: 10px;
+  color: #fff;
+}
+.modal-content .modal-header button {
+  color: #fff;
+}
+
+.btn-add-author {
+  background-color: #F3E8D2;
+  color: #1a3a28;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  padding: 8px;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+}
+.btn-add-author:hover {
+  background-color: #dcc9a0;
+  color: #1a3a28;
+}
+
+.api-error-banner {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+form#BookFilterForm {
+  background-color: #F3E8D2;
+  border-radius: 10px;
+}
+form label {
+  font-weight: 700;
+}
+form label.input-group-text {
+  border: 1px solid #2f6b47;
+}
+form input.form-control,
+form textarea.form-control,
+form #Sort {
+  border: 1px solid #fff;
+}
+form input.form-control:focus,
+form textarea.form-control:focus,
+form #Sort:focus {
+  border-color: #2f6b47;
+  box-shadow: none;
+}
+form textarea {
+  resize: none;
+}
+
+button.save {
+  background-color: #2f6b47;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+button.save:hover {
+  background-color: #1a3a28;
+}
+
+/*# sourceMappingURL=profile.css.map */
